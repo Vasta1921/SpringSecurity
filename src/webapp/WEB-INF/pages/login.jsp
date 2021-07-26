@@ -12,9 +12,9 @@
 </head>
 <body>
 
-<form method="post" action="/login">
-    <input name="j_username"/>
-    <input name="j_password"/>
+<form method="post" action="login">
+    <input name="j_username" placeholder="Login"/>
+    <input name="j_password" placeholder="Password" type="password"/>
     <input type="submit"/>
 </form>
 

@@ -53,6 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 // разрешаем делать логаут всем
                 .permitAll()
+                //.clearAuthentication(true)//.invalidateHttpSession(true).deleteCookies("JSESSIONID")
                 // указываем URL логаута
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 // указываем URL при удачном логауте
@@ -66,7 +67,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //страницы аутентификаци доступна всем
                 .antMatchers("/login").anonymous()
                 // защищенные URL
-                .antMatchers("/admin/").access("hasAnyRole('admin')").anyRequest().authenticated();
+                .antMatchers("/admin/").access("hasAnyRole('admin')")
+                .anyRequest().authenticated();
     }
 
     @Bean

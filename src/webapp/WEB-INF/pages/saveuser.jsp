@@ -24,7 +24,7 @@
 
 <c:forEach items="${roles}" var="role">
 
-    <input type="checkbox" name="role" value="${role.getRole()}"> ${role.getRole()}<br><br>
+    <input type="radio" name="role" value="${role.getRole()}" required> ${role.getRole()}<br><br>
 </c:forEach>
 
 <input  type="submit" value="submit">

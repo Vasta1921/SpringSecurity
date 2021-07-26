@@ -43,9 +43,9 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         }
 
         if (isUser) {
-            return "/user";
+            return "user";
         } else if (isAdmin) {
-            return "/admin/users";
+            return "admin/users";
         } else {
             throw new IllegalStateException();
         }

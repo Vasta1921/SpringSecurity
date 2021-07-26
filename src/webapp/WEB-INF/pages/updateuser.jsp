@@ -25,7 +25,7 @@
     <h4>Определите роли для юзера</h4>
     <c:forEach items="${roles}" var="role">
 
-        <input type="checkbox" name="roles" value="${role.getRole()}"> ${role.getRole()}<br><br>
+        <input type="radio" name="roles" value="${role.getRole()}" required> ${role.getRole()}<br><br>
     </c:forEach>
 
     <input type="submit" value="Update">
